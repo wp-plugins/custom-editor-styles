@@ -3,7 +3,7 @@
   Plugin Name: Custom Editor Styles
   Plugin URI: http://wordpress.org/extend/plugins/custom-editor-styles/
   Description: Allows the user to easily apply classes to text within the visual editor
-  Version: 1.0
+  Version: 1.1
   Author: Konstantinos Kouratoras
   Author URI: http://www.kouratoras.gr
   Author Email: kouratoras@gmail.com
