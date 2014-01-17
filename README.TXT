@@ -4,12 +4,11 @@ Plugin Name: Custom Editor Styles
 Plugin URI: http://wordpress.org/extend/plugins/custom-editor-styles
 Author URI: http://www.kouratoras.gr
 Author: Konstantinos Kouratoras
-Donate link: 
 Tags: custom, editor, styles, class, stylesheet, wysiwyg, css
-Requires at least: 2.9.0
-Tested up to: 3.4.2
-Stable tag: 1.0
-Version: 1.0
+Requires at least: 3.2
+Tested up to: 3.8
+Stable tag: 1.1
+Version: 1.1
 License: GPLv2 or later
 
 Allows the user to easily apply classes to text within the visual editor
@@ -36,6 +35,10 @@ From the "Styles" dropdown menu of the visual editor
 2. "Styles" dropdown menu of the visual editor
 
 == Changelog ==
+
+= 1.1 = 
+* Bug fixes
+* Compatibility with WordPress 3.8
 
 = 1.0 = 
 * Initial Release

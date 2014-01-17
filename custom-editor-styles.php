@@ -52,7 +52,7 @@ class CustomEditorStyles {
 	}
 
 	function setup_theme_admin_menus() {
-		add_menu_page('Editor Styles', 'Editor Styles', 'manage_options', 'editor_styles', array(&$this, 'theme_settings_page'), plugins_url('custom-editor-styles/images/custom-editor-styles.png'));
+		add_menu_page('Editor Styles', 'Editor Styles', 'manage_options', 'editor_styles', array(&$this, 'editor_styles_settings'), plugins_url('custom-editor-styles/images/custom-editor-styles.png'));
 		add_submenu_page('editor_styles_settings', 'Styles', 'Styles', 'manage_options', 'editor_styles', array(&$this, 'editor_styles_settings'));
 	}
 
@@ -89,19 +89,22 @@ class CustomEditorStyles {
 					<?php
 					$styles = get_option("custom_editor_styles");
 					$style_counter = 0;
-					foreach ($styles as $style => $class) :
-						?>
-						<li class="styles-element" id="styles-element-<?php echo $style_counter; ?>">  
+					
+					if($styles):
+						foreach ($styles as $style => $class) :
+							?>
+							<li class="styles-element" id="styles-element-<?php echo $style_counter; ?>">  
 
-							<label for="style-id-<?php echo $style_counter; ?>">Style:</label>
-							<input name="style-id-<?php echo $style_counter; ?>" type="text" value="<?php echo $style; ?>" />
-							<label for="class-id-<?php echo $style_counter; ?>">Class:</label>
-							<input name="class-id-<?php echo $style_counter; ?>" type="text" value="<?php echo $class; ?>" />
-							<a href="#" onclick="removeElement(jQuery(this).closest('.styles-element'));">Remove</a>
-						</li>  
-						<?php
-						$style_counter++;
-					endforeach;
+								<label for="style-id-<?php echo $style_counter; ?>">Style:</label>
+								<input name="style-id-<?php echo $style_counter; ?>" type="text" value="<?php echo $style; ?>" />
+								<label for="class-id-<?php echo $style_counter; ?>">Class:</label>
+								<input name="class-id-<?php echo $style_counter; ?>" type="text" value="<?php echo $class; ?>" />
+								<a href="#" onclick="removeElement(jQuery(this).closest('.styles-element'));">Remove</a>
+							</li>  
+							<?php
+							$style_counter++;
+						endforeach;
+					endif;
 					?>
 
 				</ul>  
